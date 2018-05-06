@@ -46,3 +46,9 @@ config :logger, :console, format: "[$level] $message\n"
 # Set a higher stacktrace during development. Avoid configuring such
 # in production as building large stacktraces may be expensive.
 config :phoenix, :stacktrace_depth, 20
+
+config :basic_auth_sample, basic_auth_sample_config: [
+  username: {:system, "BASIC_AUTH_USERNAME"},
+  password: {:system, "BASIC_AUTH_PASSWORD"},
+  realm: {:system, "BASIC_AUTH_REALM"}
+]
